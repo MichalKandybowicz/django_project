@@ -5,13 +5,14 @@ from django.http import HttpResponse
 
 def home(request, *args, **kwargs):
     print(request.user)
-    return HttpResponse("<h1>Hello World</h1>")
+    return render(request, 'home.html', {})
 
 
 def contact(request, *args, **kwargs):
-    return HttpResponse("<h1>any@any.any</h1>")
+    return render(request, 'contact.html', {})
 
 
 def shop(request, *args, **kwargs):
-    return HttpResponse("<h1>shop</h1>")
+    return render(request, 'shop.html', {})
+
 
